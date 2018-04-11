@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+
+  <title>Books</title>
+
+{% endblock page_title %}
+
+{% block content %}
+
+  <div class="row justify-content-center">
+
+    <div class="col-10">
+
+      <table class="table">
+
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Book Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Libraries</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          {% for book in books %}
+            <tr class="book">
+              <td>{{ book.title }}</td>
+              <td>{{ book.author.fullname }}</td>
+              <td>{{ book.get_libraries_names }}</td>
+            </tr>
+          {% endfor %}
+
+        </tbody>
+        
+      </table>
+
+    </div>
+
+  </div>
+
+{% endblock content %}

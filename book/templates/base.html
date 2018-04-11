@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    {% block page_title %}
+      <title>Home</title>
+    {% endblock page_title %}
+  
+  </head>
+  
+  <body>
+    
+    <div class="container">
+      
+      {% block navbar %}
+        
+        {% include 'navbar.html' %}
+      
+      {% endblock navbar %}
+
+      {% block pagination %}
+  
+        {% include 'pagination.html' %}
+      
+      {% endblock pagination %}
+      
+      {% block content %}
+      {% endblock content %}    
+   
+    </div>
+
+  </body>
+
+</html>

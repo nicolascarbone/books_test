@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+
+{% block page_title %}
+
+  <title>Authors</title>
+
+{% endblock page_title %}
+
+{% block content %}
+
+  <div class="row justify-content-center">
+
+    <div class="col-6">
+
+      <table class="table">
+
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Author Name</th>
+            <th scope="col">Number of Books</th>
+          </tr>
+        </thead>
+
+        {% for author in authors %}
+          <tr>
+            <td>{{ author.fullname }}</td>
+            <td class="text-right">{{ author.get_book_count }}</td>
+          </tr>
+        {% endfor %}
+
+      </table>
+
+    </div>
+
+  </div>
+
+{% endblock content %}

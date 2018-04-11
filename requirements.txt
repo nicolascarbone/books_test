@@ -1,0 +1,4 @@
+Django==2.0.1
+django-debug-toolbar==1.9.1
+djangorestframework==3.8.2
+pyquery==1.4.0

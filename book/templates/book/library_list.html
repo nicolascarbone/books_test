@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+
+  <title>Libraries</title>
+
+{% endblock page_title %}
+
+{% block content %}
+  
+  <div class="row justify-content-center">
+
+    <div class="col-6">
+
+      <table class="table">
+
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Library</th>
+            <th scope="col">Books in library</th>
+            <th scope="col">Different author quantity</th>
+          </tr>
+        </thead>
+
+        {% for library in libraries %}
+          <tr>
+            <td>{{ library.name }}</td>
+            <td class="text-right">{{ library.get_book_count }}</td>
+            <td class="text-right">{{ library.get_author_count }}</td>
+          </tr>
+        {% endfor %}
+  
+      </table>
+
+    </div>
+
+  </div>
+
+{% endblock content %}
